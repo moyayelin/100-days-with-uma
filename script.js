@@ -65,19 +65,3 @@ const observer = new IntersectionObserver(
 );
 
 revealNodes.forEach((node) => observer.observe(node));
-
-function setupQrCode() {
-  const currentUrl = window.location.href;
-  const isHosted = window.location.protocol.startsWith("http");
-
-  if (!isHosted) {
-    qrText.textContent = "本地预览中。部署到 GitHub Pages 后，这里会显示可扫码访问的二维码。";
-    return;
-  }
-
-  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=440x440&margin=16&data=${encodeURIComponent(currentUrl)}`;
-  qrImage.src = qrUrl;
-  qrText.textContent = `扫码即可在手机打开当前页面：${window.location.host}`;
-}
-
-setupQrCode();
