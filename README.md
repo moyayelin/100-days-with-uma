@@ -19,3 +19,5 @@ python -m http.server 8080
 3. 在 GitHub 仓库设置里启用 `Pages`
 4. Source 选择当前分支的 `/ (root)`
 5. 发布后即可访问 Pages 
+
+## Web live @ https://moyayelin.github.io/100-days-with-uma/
